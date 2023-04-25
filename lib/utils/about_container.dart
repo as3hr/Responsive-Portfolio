@@ -17,7 +17,7 @@ class AboutContainer extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.only(
-          left: 15,
+          left: size.width < 500 ? 15 : 0,
           top: size.width < 500 ? 5 : 10,
           bottom: size.width < 500 ? 5 : 0,
           right: 3),
@@ -26,14 +26,14 @@ class AboutContainer extends StatelessWidget {
             ? 135
             : size.width < 1100
                 ? 150
-                : 160,
+                : 170,
         height: size.width < 500
             ? 140
             : size.width < 1100
                 ? 160
-                : 180,
+                : 190,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(25),
           color: color,
         ),
         child: Column(
@@ -44,7 +44,7 @@ class AboutContainer extends StatelessWidget {
                 text1,
                 style: TextStyle(
                     color: textColor,
-                    fontSize: 30,
+                    fontSize: size.width < 500 ? 30 : 32,
                     fontWeight: FontWeight.bold),
               ),
             ),

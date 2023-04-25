@@ -11,7 +11,8 @@ class UiPortfolio extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        width: size.width < 500 ? 450 : 520,
+        height: size.width < 500 ? 180 : 233,
+        width: size.width < 500 ? 450 : 530,
         decoration: BoxDecoration(
             color: kbackgroundWidgetColor,
             borderRadius: BorderRadius.circular(20)),
@@ -48,39 +49,38 @@ class UiPortfolio extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
+            //Image with black Background
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    child: Stack(children: [
-                      ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Image(
-                            image: const AssetImage('assets/UIFirst.png'),
-                            height: size.width < 500 ? 120 : 150,
-                            width: size.width < 500 ? 120 : 150,
-                            fit: BoxFit.fill,
-                          )),
-                      Container(
-                        width: size.width < 500 ? 120 : 150,
-                        height: size.width < 500 ? 120 : 150,
-                        decoration: BoxDecoration(
-                            color: Colors.black54,
-                            borderRadius: BorderRadius.circular(6)),
-                        child: const Center(
-                            child: Text(
-                          'Read More',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
+                  padding: const EdgeInsets.all(5.0),
+                  child: Stack(children: [
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Image(
+                          image: const AssetImage('assets/UIFirst.png'),
+                          height: size.width < 500 ? 120 : 160,
+                          width: size.width < 500 ? 120 : 160,
+                          fit: BoxFit.fill,
                         )),
-                      ),
-                      //Image with black Background
-                    ]),
-                  ),
+                    Container(
+                      width: size.width < 500 ? 120 : 160,
+                      height: size.width < 500 ? 120 : 160,
+                      decoration: BoxDecoration(
+                          color: Colors.black54,
+                          borderRadius: BorderRadius.circular(6)),
+                      child: const Center(
+                          child: Text(
+                        'Read More',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      )),
+                    ),
+                  ]),
                 ),
                 reusableContainer('assets/UISecond.png', context),
                 reusableContainer('assets/UIThird.png', context),
@@ -95,10 +95,10 @@ class UiPortfolio extends StatelessWidget {
   Widget reusableContainer(String imagepath, BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(right: 8, left: 5, top: 5, bottom: 5),
       child: SizedBox(
         width: size.width < 500 ? 120 : 160,
-        height: size.width < 500 ? 120 : 170,
+        height: size.width < 500 ? 120 : 160,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15),
           child: Image(fit: BoxFit.cover, image: AssetImage(imagepath)),

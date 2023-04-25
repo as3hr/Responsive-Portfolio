@@ -10,7 +10,6 @@ class IdeasContainer extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
-      // padding: EdgeInsets.only(left: size.width < 500 ? 7.0 : 8, top: 8),
       padding: const EdgeInsets.all(8),
       child: Container(
         width: size.width < 500
@@ -51,7 +50,7 @@ class IdeasContainer extends StatelessWidget {
                     'To Life Through',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: size.width < 500 ? 35 : 45,
+                        fontSize: size.width < 500 ? 35 : 50,
                         fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -66,7 +65,7 @@ class IdeasContainer extends StatelessWidget {
                     'UI Design',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: size.width < 500 ? 35 : 45,
+                        fontSize: size.width < 500 ? 35 : 55,
                         fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -77,7 +76,7 @@ class IdeasContainer extends StatelessWidget {
                           ? 100
                           : size.width < 1100
                               ? 120
-                              : 130,
+                              : 140,
                       height: size.width < 500
                           ? 30
                           : size.width < 1100
@@ -86,20 +85,21 @@ class IdeasContainer extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: kblueandPurpleColor,
                           borderRadius: BorderRadius.circular(20)),
-                      child: const Center(
+                      child: Center(
                           child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 8.0),
+                            padding: const EdgeInsets.only(left: 8.0),
                             child: Text(
                               'Hire Me',
                               style: TextStyle(
+                                  fontSize: size.width < 500 ? 15 : 20,
                                   color: Colors.white,
                                   fontWeight: FontWeight.w500),
                             ),
                           ),
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.only(left: 8.0),
                             child: Image(
                               height: 20,

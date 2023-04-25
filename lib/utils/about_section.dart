@@ -12,7 +12,8 @@ class AboutSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20, top: 8, bottom: 8),
+          padding: EdgeInsets.only(
+              left: size.width < 500 ? 10 : 5, top: 8, bottom: 8),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Image(
@@ -30,10 +31,12 @@ class AboutSection extends StatelessWidget {
             //Name Container
             Padding(
               padding: EdgeInsets.only(
-                  right: 35, top: 8, left: size.width < 1100 ? 0 : 10),
+                  right: size.width < 500 ? 10 : 10,
+                  top: 8,
+                  left: size.width < 1100 ? 0 : 10),
               child: Container(
                   width: size.width < 500
-                      ? 180
+                      ? 200
                       : size.width < 1100
                           ? 200
                           : 200,
@@ -66,9 +69,10 @@ class AboutSection extends StatelessWidget {
 
             //Location Container
             Padding(
-              padding: const EdgeInsets.only(top: 8, bottom: 5, right: 30),
+              padding: EdgeInsets.only(
+                  top: 8, bottom: 5, right: size.width < 500 ? 10 : 0),
               child: Container(
-                  width: size.width < 500 ? 180 : 200,
+                  width: size.width < 500 ? 200 : 200,
                   height: size.width < 500
                       ? 170
                       : size.width < 100
@@ -126,10 +130,11 @@ class AboutSection extends StatelessWidget {
 
             //Socials Container
             Padding(
-              padding: const EdgeInsets.only(right: 30, bottom: 5),
+              padding:
+                  EdgeInsets.only(right: size.width < 500 ? 10 : 0, bottom: 5),
               child: Container(
                   width: size.width < 500
-                      ? 180
+                      ? 200
                       : size.width < 1100
                           ? 200
                           : 200,

@@ -10,13 +10,15 @@ class CustomAppBar extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: size.width < 500
+          ? const EdgeInsets.all(8)
+          : const EdgeInsets.only(right: 8.0, top: 8, bottom: 8),
       child: Container(
         width: size.width < 500
             ? double.infinity
             : size.width < 1100
                 ? 400
-                : 550,
+                : 510,
         height: size.width < 500 ? 60 : 50,
         decoration: BoxDecoration(
             color: kbackgroundWidgetColor,
