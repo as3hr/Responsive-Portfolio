@@ -11,7 +11,11 @@ class UiPortfolio extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: size.width < 500 ? 180 : 233,
+        height: size.width < 500
+            ? 180
+            : size.width < 1100
+                ? 229
+                : 233,
         width: size.width < 500 ? 450 : 530,
         decoration: BoxDecoration(
             color: kbackgroundWidgetColor,

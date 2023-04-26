@@ -13,14 +13,25 @@ class AboutSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.only(
-              left: size.width < 500 ? 10 : 5, top: 8, bottom: 8),
+              left: size.width < 500
+                  ? 10
+                  : size.width < 1100
+                      ? 0
+                      : 5,
+              top: 8,
+              bottom: 8),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Image(
-                width: size.width < 500
-                    ? 210
+                height: size.width < 500
+                    ? 290
                     : size.width < 1100
-                        ? 300
+                        ? 370
+                        : 380,
+                width: size.width < 500
+                    ? 220
+                    : size.width < 1100
+                        ? 270
                         : 300,
                 fit: BoxFit.fill,
                 image: const AssetImage('assets/mainpicture.png')),
@@ -31,9 +42,9 @@ class AboutSection extends StatelessWidget {
             //Name Container
             Padding(
               padding: EdgeInsets.only(
-                  right: size.width < 500 ? 10 : 10,
+                  right: size.width < 500 ? 20 : 10,
                   top: 8,
-                  left: size.width < 1100 ? 0 : 10),
+                  left: size.width < 1100 ? 10 : 10),
               child: Container(
                   width: size.width < 500
                       ? 200
@@ -70,7 +81,14 @@ class AboutSection extends StatelessWidget {
             //Location Container
             Padding(
               padding: EdgeInsets.only(
-                  top: 8, bottom: 5, right: size.width < 500 ? 10 : 0),
+                  top: 8,
+                  bottom: 5,
+                  right: size.width < 500 ? 10 : 0,
+                  left: size.width < 500
+                      ? 0
+                      : size.width < 100
+                          ? 10
+                          : 0),
               child: Container(
                   width: size.width < 500 ? 200 : 200,
                   height: size.width < 500

@@ -12,12 +12,14 @@ class CustomAppBar extends StatelessWidget {
     return Padding(
       padding: size.width < 500
           ? const EdgeInsets.all(8)
-          : const EdgeInsets.only(right: 8.0, top: 8, bottom: 8),
+          : size.width < 1100
+              ? const EdgeInsets.only(right: 8.0, top: 8, bottom: 8, left: 8)
+              : const EdgeInsets.only(right: 8.0, top: 8, bottom: 8),
       child: Container(
         width: size.width < 500
             ? double.infinity
             : size.width < 1100
-                ? 400
+                ? size.width * 1.2
                 : 510,
         height: size.width < 500 ? 60 : 50,
         decoration: BoxDecoration(
@@ -27,7 +29,7 @@ class CustomAppBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 8.0),
+              padding: const EdgeInsets.only(left: 10),
               child: RichText(
                 text: const TextSpan(
                     text: 'Bim',

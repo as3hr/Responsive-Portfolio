@@ -15,12 +15,12 @@ class IdeasContainer extends StatelessWidget {
         width: size.width < 500
             ? double.infinity
             : size.width < 1100
-                ? 450
+                ? 520
                 : 520,
         height: size.width < 500
             ? 150
             : size.width < 1100
-                ? 175 //tablet
+                ? 210 //tablet
                 : 225, //desktop
         decoration: BoxDecoration(
           color: kbackgroundWidgetColor,

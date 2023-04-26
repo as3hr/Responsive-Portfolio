@@ -22,11 +22,19 @@ class AboutDescription extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(
           left: 8.0,
-          top: size.width < 500 ? 8 : 0,
+          top: size.width < 500
+              ? 8
+              : size.width < 1100
+                  ? 8
+                  : 0,
           right: size.width < 500 ? 10 : 25,
           bottom: 8),
       child: Container(
-        width: size.width < 500 ? 450 : 520,
+        width: size.width < 500
+            ? 450
+            : size.width < 1100
+                ? 490
+                : 520,
         decoration: BoxDecoration(
             color: kbackgroundWidgetColor,
             borderRadius: BorderRadius.circular(20)),
