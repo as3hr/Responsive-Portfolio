@@ -1,16 +1,19 @@
-# responsive_portfolio
 
-A new Flutter project.
+A RESPONSIVE PORTFOLIO BUILT IN FLUTTER
 
-## Getting Started
+This is a RESPONSIVE PORTFOLIO that I have built which is for Mobile devices, tablet devices and as well as for desktop applications.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Desktop View
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+![desktopversion](https://user-images.githubusercontent.com/113264020/234647902-f156abd3-76e7-4a86-a849-31bffc6d30fe.png)
+
+## Tablet View
+
+![tabletversion](https://user-images.githubusercontent.com/113264020/234648131-2e6e0c7e-2ddd-4e31-b7ec-7ce133eddead.png)
+
+## Mobile Version
+
+
