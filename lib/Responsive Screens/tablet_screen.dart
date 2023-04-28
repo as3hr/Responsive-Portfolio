@@ -50,9 +50,6 @@ class TabletScreen extends StatelessWidget {
               )
             ],
           ),
-          // Row(
-          //   children: [UiPortfolio(), AboutDescription()],
-          // ),
         ],
       ),
     );
